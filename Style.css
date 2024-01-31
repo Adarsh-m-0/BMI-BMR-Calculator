@@ -5,6 +5,7 @@ body {
   align-items: center;
   background-color: var(--background);
   color: var(--color);
+  font-size: 16px;
 }
 
 :root {
@@ -28,7 +29,7 @@ i:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 88vh;
+  height: 75vh;
 }
 
 #nav_main {
@@ -36,9 +37,8 @@ i:hover {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
+  grid-template-columns: 70% 1fr; 
 }
 
 #nav_main i {
@@ -64,8 +64,8 @@ a:hover {
 }
 
 #link {
-  float: right;
-  padding-right: 10px;
+  text-align: right;
+  padding-right: 1rem;
 }
 
 #title p {
@@ -73,10 +73,20 @@ a:hover {
 }
 
 form {
-  padding: 70px;
+  padding: 2rem;
   background-color: var(--gray);
-  border-radius: 8px;
+  border-radius: 0.5rem;
+  max-width: 300px;
   width: 300px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 input {
@@ -120,13 +130,31 @@ button:hover {
   font-weight: 400;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 14px;
+footer {
+    margin-top: auto; /* Push the footer to the bottom */
+    text-align: center; /* Center the text horizontally */
+    padding: 3rem;
+    font-size: small;
   }
 
-  form {
-    padding: 20px;
-    width: 80%;
-  }
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+      }
+    
+      form {
+        padding: 1rem;
+      }
+    
+      #nav_main {
+        padding: 0.5rem;
+      }
+    
+      .Main {
+        height: 75vh;
+      }
+    
+      footer {
+        margin-top: 1rem;
+      }
 }

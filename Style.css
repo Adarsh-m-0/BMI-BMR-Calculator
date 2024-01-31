@@ -1,92 +1,128 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(214, 203, 175); 
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  color: var(--color);
+}
+
+:root {
+  --background: rgb(214, 203, 175);
+  --color: black;
+  --gray: rgb(191, 179, 150);
+}
+
+.dark_mode {
+  --background: black;
+  --color: rgb(214, 203, 175);
+  --gray: rgb(47, 47, 47);
 }
 
 .Main {
-    display: flex;
-    flex-direction: column; /* Added to stack children vertically */
-    align-items: center;
-    justify-content: center; /* Center content both vertically and horizontally */
-    height: 88vh; /* Added to make sure the Main div takes the full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 88vh;
+}
+
+#nav_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#nav_main i {
+  padding-right: 10px;
+  font-size: 22px;
 }
 
 #title {
-    font-size: large;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-size: large;
+  display: flex;
+  align-items: center;
 }
 
 a {
-    text-decoration: none; 
-    color: inherit; 
-    cursor: pointer; 
-    padding-left: 10px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  padding-left: 10px;
 }
 
 a:hover {
-    text-decoration: underline; 
+  text-decoration: underline;
 }
-
 
 #link {
-    float: right;
-    padding-right: 10px;
+  float: right;
+  padding-right: 10px;
 }
 
-
 #title p {
-    text-align: center; 
+  text-align: center;
 }
 
 form {
-    padding: 70px;
-    background-color: rgb(191, 179, 150);
-    border-radius: 8px;
-    width: 300px;
+  padding: 70px;
+  background-color: var(--gray);
+  border-radius: 8px;
+  width: 300px;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 #Gender {
-    display: flex;
+  display: flex;
 }
 
 #Gender label {
-    padding-right: 70px;
+  padding-right: 70px;
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
+  display: block;
+  margin-bottom: 8px;
 }
 
 button {
-    border: 0;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 7px;
-    background-color: rgb(231, 192, 37);
-    cursor: pointer;
+  border: 0;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 7px;
+  background-color: rgb(231, 192, 37);
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: rgb(221, 186, 44);
+  background-color: rgb(221, 186, 44);
 }
 
 #result {
-    margin-top: 16px;
-    font-weight: 400;
+  margin-top: 16px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  form {
+    padding: 20px;
+    width: 80%;
+  }
 }

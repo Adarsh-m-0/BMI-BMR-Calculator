@@ -68,8 +68,9 @@ function calculateBMI() {
     document.getElementById("result").innerHTML += "<br><br>You are obese.";
   }
 
-  const RecalUnder = adjustedBMRIn + 500;
-  const RecalOver = adjustedBMRIn - 500;
+  const RecalUnder = (adjustedBMR + 500).toFixed(2);
+  const RecalOver = (adjustedBMR - 500).toFixed(2);
+  
 
   if(bmiIn < 18.5){
     document.getElementById("result").innerHTML += `<br>Recommended calorie intake: ${RecalUnder}`;

@@ -13,6 +13,10 @@ body {
   --gray: rgb(191, 179, 150);
 }
 
+i:hover {
+    cursor: pointer;
+}
+
 .dark_mode {
   --background: black;
   --color: rgb(214, 203, 175);

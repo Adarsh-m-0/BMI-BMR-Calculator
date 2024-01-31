@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>BMI & BMR Calculator</title>
+</head>
+<body>
+    <p id="title">BMI & BMR Calculator</p>
+    <div class="Main">
+    <form onsubmit="calculateBMI(); return false;">
+        <label for="Height" >Enter your Height</label>
+        <input type="text" name="Height" id="heightInput" required>
+        
+        <label for="Weight">Enter your Weight</label>
+        <input type="text" name="Weight" id="weightInput" required>
+        
+        <label for="Age">Enter your Age</label>
+        <input type="text" name="Age" id="Age" required>
+
+        <div id="Gender">
+
+        
+        <input type="radio" name="Gender" id="Male" value="Male">
+        <label for="Male">Male</label>
+    
+        <input type="radio" name="Gender" id="Female" value="Female">
+        <label for="Female">Female</label>
+
+        </div>
+    
+        <button type="submit">Check</button>
+        <p id="result"></p>
+    </form>
+    </div>
+    <footer><a href="https://github.com/Adarsh-m-0">By Adarsh M</a></footer>
+    
+<script src="index.js"></script>
+</body>
+</html>
